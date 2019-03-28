@@ -9,11 +9,11 @@ namespace Dr110 {
     pinMode(DR110_STOP_PIN, OUTPUT);
     pinMode(DR110_INT_CLOCK_PIN, OUTPUT);
 
-    set_int_clock(true);
+    set_internal_clock(true);
   }
 
   void start() {
-    set_int_clock(false);
+    set_internal_clock(false);
     reset_clock();
 
     pulse(DR110_START_PIN);
@@ -22,7 +22,7 @@ namespace Dr110 {
   void stop() {
     pulse(DR110_STOP_PIN);
 
-    set_int_clock(true);
+    set_internal_clock(true);
   }
   
   void pulse(int pin) {
@@ -33,7 +33,7 @@ namespace Dr110 {
     delay(DR110_PULSE_DELAY);
   }
 
-  void set_int_clock(bool enable) {
+  void set_internal_clock(bool enable) {
     clock_state = true;
 
     bool clock_pin_mode = enable ? INPUT : OUTPUT;

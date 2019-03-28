@@ -13,7 +13,7 @@ namespace Dr110 {
   void start();
   void stop();
   void pulse(int);
-  void set_int_clock(bool);
+  void set_internal_clock(bool);
   void reset_clock();
   void iterate_clock();
   void set_clock_state();
