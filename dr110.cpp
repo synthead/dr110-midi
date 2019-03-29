@@ -9,6 +9,13 @@ namespace Dr110 {
     pinMode(DR110_STOP_PIN, OUTPUT);
     pinMode(DR110_INT_CLOCK_PIN, OUTPUT);
 
+    pinMode(DR110_BD_PIN, OUTPUT);
+    pinMode(DR110_SD_PIN, OUTPUT);
+    pinMode(DR110_OH_PIN, OUTPUT);
+    pinMode(DR110_CH_PIN, OUTPUT);
+    pinMode(DR110_CY_PIN, OUTPUT);
+    pinMode(DR110_HCP_PIN, OUTPUT);
+
     set_internal_clock(true);
   }
 
@@ -54,5 +61,29 @@ namespace Dr110 {
 
   void set_clock_state() {
     digitalWrite(DR110_CLOCK_PIN, clock_state);
+  }
+
+  void bd() {
+    pulse(DR110_BD_PIN);
+  }
+
+  void sd() {
+    pulse(DR110_SD_PIN);
+  }
+
+  void oh() {
+    pulse(DR110_OH_PIN);
+  }
+
+  void ch() {
+    pulse(DR110_CH_PIN);
+  }
+
+  void cy() {
+    pulse(DR110_CY_PIN);
+  }
+
+  void hcp() {
+    pulse(DR110_HCP_PIN);
   }
 }
