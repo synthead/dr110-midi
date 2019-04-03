@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name dr110-midi)(type KiCad)(uri ${KIPRJMOD}/dr110-midi.pretty)(options "")(descr ""))
+)
