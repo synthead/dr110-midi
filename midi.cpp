@@ -8,6 +8,7 @@ namespace Midi {
   int8_t note = -1;
   uint8_t midi_data;
   uint8_t received_channel;
+  bool started = false;
 
   void setup() {
     Serial1.begin(31250);
@@ -20,15 +21,15 @@ namespace Midi {
       switch (midi_data) {
         case MIDI_START:
         case MIDI_CONTINUE:
-          Dr110::start();
+          start();
           break;
 
         case MIDI_STOP:
-          Dr110::stop();
+          stop();
           break;
 
         case MIDI_CLOCK:
-          Dr110::iterate_clock();
+          clock();
           break;
       }
 
@@ -48,6 +49,22 @@ namespace Midi {
           listen_for_note = true;
         }
       }
+    }
+  }
+
+  void start() {
+    started = true;
+    Dr110::start();
+  }
+
+  void stop() {
+    started = false;
+    Dr110::stop();
+  }
+
+  void clock() {
+    if (started) {
+      Dr110::iterate_clock();
     }
   }
 

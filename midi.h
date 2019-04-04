@@ -19,6 +19,9 @@
 namespace Midi {
   void setup();
   void process_messages();
+  void start();
+  void stop();
+  void clock();
   void trigger_drum(uint8_t);
 }
 
