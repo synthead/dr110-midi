@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:dr110-midi-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -48,28 +47,6 @@ START
 Text GLabel 4850 2450 0    50   Input ~ 0
 STOP
 $Comp
-L Transistor_BJT:BC547 Q2
-U 1 1 5CA12AF1
-P 2750 3750
-F 0 "Q2" H 2941 3796 50  0000 L CNN
-F 1 "BC547" H 2941 3705 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 3675 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 3750 50  0001 L CNN
-	1    2750 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5CA12AF9
-P 2450 3600
-F 0 "R2" H 2380 3554 50  0000 R CNN
-F 1 "2.2K" H 2380 3645 50  0000 R CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 3600 50  0001 C CNN
-F 3 "~" H 2450 3600 50  0001 C CNN
-	1    2450 3600
-	-1   0    0    1   
-$EndComp
-$Comp
 L Isolator:6N138 U1
 U 1 1 5CA34638
 P 3600 1650
@@ -97,7 +74,7 @@ U 1 1 5CA36F26
 P 3100 1600
 F 0 "D1" V 3054 1679 50  0000 L CNN
 F 1 "D" V 3145 1679 50  0000 L CNN
-F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3100 1600 50  0001 C CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 3100 1600 50  0001 C CNN
 F 3 "~" H 3100 1600 50  0001 C CNN
 	1    3100 1600
 	0    1    1    0   
@@ -173,10 +150,6 @@ Wire Wire Line
 Wire Wire Line
 	4750 2250 4850 2250
 Connection ~ 4100 1750
-Wire Wire Line
-	2550 3750 2450 3750
-Text Notes 2800 3950 2    50   ~ 0
-BD
 Text Notes 2350 2500 0    50   ~ 0
 Clock switch
 Text GLabel 5350 1800 2    50   Input ~ 0
@@ -226,182 +199,30 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 2850 50  0001 L CNN
 $EndComp
 Text GLabel 2950 2650 2    50   Input ~ 0
 CLOCK_IN
-Wire Notes Line
-	3950 3400 2350 3400
-Text Notes 2350 3400 0    50   ~ 0
-Key matrix interface
-Wire Notes Line
-	2350 3400 2350 7050
-Wire Notes Line
-	3950 7050 3950 3400
-Wire Notes Line
-	2350 7050 3950 7050
-Text Notes 2800 6950 2    50   ~ 0
-HCP
-Text Notes 2800 6350 2    50   ~ 0
-CY
-Text Notes 2800 5750 2    50   ~ 0
-CH
-Text Notes 2800 5150 2    50   ~ 0
-OH
-Text Notes 2800 4550 2    50   ~ 0
-SD
-Wire Wire Line
-	2550 6750 2450 6750
-Wire Wire Line
-	2550 6150 2450 6150
-$Comp
-L Device:R R7
-U 1 1 5CA90AD2
-P 2450 6600
-F 0 "R7" H 2380 6554 50  0000 R CNN
-F 1 "2.2K" H 2380 6645 50  0000 R CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 6600 50  0001 C CNN
-F 3 "~" H 2450 6600 50  0001 C CNN
-	1    2450 6600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q7
-U 1 1 5CA90ACC
-P 2750 6750
-F 0 "Q7" H 2941 6796 50  0000 L CNN
-F 1 "BC547" H 2941 6705 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 6675 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 6750 50  0001 L CNN
-	1    2750 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5CA90AC6
-P 2450 6000
-F 0 "R6" H 2380 5954 50  0000 R CNN
-F 1 "2.2K" H 2380 6045 50  0000 R CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 6000 50  0001 C CNN
-F 3 "~" H 2450 6000 50  0001 C CNN
-	1    2450 6000
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q6
-U 1 1 5CA90AC0
-P 2750 6150
-F 0 "Q6" H 2941 6196 50  0000 L CNN
-F 1 "BC547" H 2941 6105 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 6075 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 6150 50  0001 L CNN
-	1    2750 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 5550 2450 5550
-Wire Wire Line
-	2550 4950 2450 4950
-$Comp
-L Device:R R5
-U 1 1 5CA8C240
-P 2450 5400
-F 0 "R5" H 2380 5354 50  0000 R CNN
-F 1 "2.2K" H 2380 5445 50  0000 R CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 5400 50  0001 C CNN
-F 3 "~" H 2450 5400 50  0001 C CNN
-	1    2450 5400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q5
-U 1 1 5CA8C23A
-P 2750 5550
-F 0 "Q5" H 2941 5596 50  0000 L CNN
-F 1 "BC547" H 2941 5505 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 5475 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 5550 50  0001 L CNN
-	1    2750 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5CA8C234
-P 2450 4800
-F 0 "R4" H 2380 4754 50  0000 R CNN
-F 1 "2.2K" H 2380 4845 50  0000 R CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 4800 50  0001 C CNN
-F 3 "~" H 2450 4800 50  0001 C CNN
-	1    2450 4800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q4
-U 1 1 5CA8C22E
-P 2750 4950
-F 0 "Q4" H 2941 4996 50  0000 L CNN
-F 1 "BC547" H 2941 4905 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 4875 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 4950 50  0001 L CNN
-	1    2750 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 4350 2450 4350
-$Comp
-L Device:R R3
-U 1 1 5CA1F7A6
-P 2450 4200
-F 0 "R3" H 2380 4154 50  0000 R CNN
-F 1 "2.2K" H 2380 4245 50  0000 R CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 4200 50  0001 C CNN
-F 3 "~" H 2450 4200 50  0001 C CNN
-	1    2450 4200
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q3
-U 1 1 5CA1F79E
-P 2750 4350
-F 0 "Q3" H 2941 4396 50  0000 L CNN
-F 1 "BC547" H 2941 4305 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 4275 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 4350 50  0001 L CNN
-	1    2750 4350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4850 3250 4750 3250
 Wire Wire Line
 	4750 3250 4750 6450
 Wire Wire Line
-	2450 6450 4750 6450
-Wire Wire Line
 	4850 3150 4650 3150
 Wire Wire Line
 	4650 3150 4650 5850
-Wire Wire Line
-	2450 5850 4650 5850
 Wire Wire Line
 	4850 3050 4550 3050
 Wire Wire Line
 	4550 3050 4550 5250
 Wire Wire Line
-	2450 5250 4550 5250
-Wire Wire Line
 	4850 2950 4450 2950
 Wire Wire Line
 	4450 2950 4450 4650
 Wire Wire Line
-	2450 4650 4450 4650
-Wire Wire Line
 	4350 2850 4350 4050
-Wire Wire Line
-	2450 4050 4350 4050
 Wire Wire Line
 	4350 2850 4850 2850
 Wire Wire Line
 	4850 2750 4250 2750
 Wire Wire Line
 	4250 2750 4250 3450
-Wire Wire Line
-	2450 3450 4250 3450
 Text GLabel 2800 1750 0    50   Input ~ 0
 MIDI_IN_5
 Wire Wire Line
@@ -485,68 +306,6 @@ Wire Notes Line
 	2350 2500 3500 2500
 Wire Notes Line
 	3500 2500 3500 3250
-Wire Wire Line
-	2850 6350 3250 6350
-Wire Wire Line
-	3250 6350 3250 6950
-Wire Wire Line
-	3250 6950 2850 6950
-Wire Wire Line
-	2850 3950 3250 3950
-Wire Wire Line
-	3250 3950 3250 4550
-Wire Wire Line
-	3250 4550 2850 4550
-Wire Wire Line
-	3250 4550 3250 5150
-Wire Wire Line
-	3250 5150 2850 5150
-Connection ~ 3250 4550
-Wire Wire Line
-	3250 5150 3250 5750
-Wire Wire Line
-	3250 5750 2850 5750
-Connection ~ 3250 5150
-Wire Wire Line
-	2850 4750 3350 4750
-Wire Wire Line
-	3350 4750 3350 5950
-Wire Wire Line
-	3350 5950 2850 5950
-Wire Wire Line
-	2850 4150 3450 4150
-Wire Wire Line
-	3450 4150 3450 6550
-Wire Wire Line
-	3450 6550 2850 6550
-Text GLabel 3500 3550 2    50   Input ~ 0
-MATRIX_1
-Wire Wire Line
-	2850 3550 3500 3550
-Text GLabel 3500 3950 2    50   Input ~ 0
-MATRIX_2
-Wire Wire Line
-	3250 3950 3500 3950
-Connection ~ 3250 3950
-Text GLabel 3500 4150 2    50   Input ~ 0
-MATRIX_3
-Wire Wire Line
-	3500 4150 3450 4150
-Connection ~ 3450 4150
-Text GLabel 3500 4750 2    50   Input ~ 0
-MATRIX_4
-Wire Wire Line
-	3500 4750 3350 4750
-Connection ~ 3350 4750
-Text GLabel 3500 5350 2    50   Input ~ 0
-MATRIX_5
-Wire Wire Line
-	3500 6350 3250 6350
-Connection ~ 3250 6350
-Wire Wire Line
-	3500 5350 2850 5350
-Text GLabel 3500 6350 2    50   Input ~ 0
-MATRIX_6
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 5CA91CE6
@@ -579,4 +338,244 @@ Wire Notes Line
 	5850 6300 5850 6750
 Text Notes 4950 6300 0    50   ~ 0
 MIDI in connections
+Text GLabel 3500 5950 2    50   Input ~ 0
+MATRIX_6
+Text GLabel 3500 5750 2    50   Input ~ 0
+MATRIX_5
+Text GLabel 3500 5150 2    50   Input ~ 0
+MATRIX_4
+Text GLabel 3500 4550 2    50   Input ~ 0
+MATRIX_3
+Text GLabel 3500 3950 2    50   Input ~ 0
+MATRIX_2
+Text GLabel 3500 3550 2    50   Input ~ 0
+MATRIX_1
+$Comp
+L Transistor_BJT:BC547 Q3
+U 1 1 5CA63A41
+P 2750 4350
+F 0 "Q3" H 2941 4396 50  0000 L CNN
+F 1 "BC547" H 2941 4305 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 4275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 4350 50  0001 L CNN
+	1    2750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CA63A4B
+P 2450 4200
+F 0 "R3" H 2380 4154 50  0000 R CNN
+F 1 "2.2K" H 2380 4245 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 4200 50  0001 C CNN
+F 3 "~" H 2450 4200 50  0001 C CNN
+	1    2450 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 4350 2450 4350
+$Comp
+L Transistor_BJT:BC547 Q4
+U 1 1 5CA63A56
+P 2750 4950
+F 0 "Q4" H 2941 4996 50  0000 L CNN
+F 1 "BC547" H 2941 4905 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 4875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 4950 50  0001 L CNN
+	1    2750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5CA63A60
+P 2450 4800
+F 0 "R4" H 2380 4754 50  0000 R CNN
+F 1 "2.2K" H 2380 4845 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 4800 50  0001 C CNN
+F 3 "~" H 2450 4800 50  0001 C CNN
+	1    2450 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q5
+U 1 1 5CA63A6A
+P 2750 5550
+F 0 "Q5" H 2941 5596 50  0000 L CNN
+F 1 "BC547" H 2941 5505 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 5475 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 5550 50  0001 L CNN
+	1    2750 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5CA63A74
+P 2450 5400
+F 0 "R5" H 2380 5354 50  0000 R CNN
+F 1 "2.2K" H 2380 5445 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 5400 50  0001 C CNN
+F 3 "~" H 2450 5400 50  0001 C CNN
+	1    2450 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 4950 2450 4950
+Wire Wire Line
+	2550 5550 2450 5550
+$Comp
+L Transistor_BJT:BC547 Q6
+U 1 1 5CA63A80
+P 2750 6150
+F 0 "Q6" H 2941 6196 50  0000 L CNN
+F 1 "BC547" H 2941 6105 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 6075 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 6150 50  0001 L CNN
+	1    2750 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5CA63A8A
+P 2450 6000
+F 0 "R6" H 2380 5954 50  0000 R CNN
+F 1 "2.2K" H 2380 6045 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 6000 50  0001 C CNN
+F 3 "~" H 2450 6000 50  0001 C CNN
+	1    2450 6000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q7
+U 1 1 5CA63A94
+P 2750 6750
+F 0 "Q7" H 2941 6796 50  0000 L CNN
+F 1 "BC547" H 2941 6705 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 6675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 6750 50  0001 L CNN
+	1    2750 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5CA63A9E
+P 2450 6600
+F 0 "R7" H 2380 6554 50  0000 R CNN
+F 1 "2.2K" H 2380 6645 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 6600 50  0001 C CNN
+F 3 "~" H 2450 6600 50  0001 C CNN
+	1    2450 6600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 6150 2450 6150
+Wire Wire Line
+	2550 6750 2450 6750
+Text Notes 2800 4550 2    50   ~ 0
+SD
+Text Notes 2800 5150 2    50   ~ 0
+OH
+Text Notes 2800 5750 2    50   ~ 0
+CH
+Text Notes 2800 6350 2    50   ~ 0
+CY
+Text Notes 2800 6950 2    50   ~ 0
+HCP
+Wire Notes Line
+	2350 7050 3950 7050
+Wire Notes Line
+	3950 7050 3950 3400
+Wire Notes Line
+	2350 3400 2350 7050
+Text Notes 2350 3400 0    50   ~ 0
+Key matrix interface
+Wire Notes Line
+	3950 3400 2350 3400
+Text Notes 2800 3950 2    50   ~ 0
+BD
+Wire Wire Line
+	2550 3750 2450 3750
+$Comp
+L Device:R R2
+U 1 1 5CA63AB6
+P 2450 3600
+F 0 "R2" H 2380 3554 50  0000 R CNN
+F 1 "2.2K" H 2380 3645 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 3600 50  0001 C CNN
+F 3 "~" H 2450 3600 50  0001 C CNN
+	1    2450 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 5CA63AC0
+P 2750 3750
+F 0 "Q2" H 2941 3796 50  0000 L CNN
+F 1 "BC547" H 2941 3705 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide" H 2950 3675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2750 3750 50  0001 L CNN
+	1    2750 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5950 3250 5950
+Wire Wire Line
+	3250 5950 3250 6550
+Wire Wire Line
+	3250 6550 2850 6550
+Wire Wire Line
+	2850 6350 3350 6350
+Wire Wire Line
+	3350 6350 3350 5150
+Wire Wire Line
+	3350 5150 2850 5150
+Wire Wire Line
+	2850 4150 3250 4150
+Wire Wire Line
+	3250 4150 3250 3550
+Wire Wire Line
+	3250 3550 2850 3550
+Wire Wire Line
+	3250 4150 3250 4750
+Wire Wire Line
+	3250 4750 2850 4750
+Connection ~ 3250 4150
+Wire Wire Line
+	3250 4750 3250 5350
+Wire Wire Line
+	3250 5350 2850 5350
+Connection ~ 3250 4750
+Wire Wire Line
+	2850 4550 3450 4550
+Wire Wire Line
+	3450 4550 3450 6950
+Wire Wire Line
+	3450 6950 2850 6950
+Wire Wire Line
+	3250 3550 3500 3550
+Connection ~ 3250 3550
+Wire Wire Line
+	2850 3950 3500 3950
+Wire Wire Line
+	3450 4550 3500 4550
+Connection ~ 3450 4550
+Wire Wire Line
+	3350 5150 3500 5150
+Connection ~ 3350 5150
+Wire Wire Line
+	2850 5750 3500 5750
+Wire Wire Line
+	3250 5950 3500 5950
+Connection ~ 3250 5950
+Wire Wire Line
+	2450 3450 4250 3450
+Wire Wire Line
+	2450 4050 4350 4050
+Wire Wire Line
+	2450 4650 4450 4650
+Wire Wire Line
+	2450 5250 4550 5250
+Wire Wire Line
+	2450 5850 4650 5850
+Wire Wire Line
+	2450 6450 4750 6450
 $EndSCHEMATC
