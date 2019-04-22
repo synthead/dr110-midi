@@ -4,6 +4,8 @@
 namespace Dr110 {
   bool clock_state;
   uint8_t triggers[] = {
+    DR110_START_PIN,
+    DR110_STOP_PIN,
     DR110_BD_PIN,
     DR110_SD_PIN,
     DR110_OH_PIN,
