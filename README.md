@@ -33,8 +33,8 @@ The board needs to be built as low-profile as possible.  The transistors should 
 |-----------|-------------------|
 | Q1-7      | BC547             |
 | R1-7      | 1-10K             |
+| R8, 10    | 220               |
 | R9        | 4.7K              |
-| R10-11    | 220               |
 | D1        | 1N4148            |
 | U1        | 6N138             |
 | U2        | Arduino Pro Micro |
