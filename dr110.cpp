@@ -3,6 +3,21 @@
 
 namespace Dr110 {
   bool clock_state;
+  uint8_t triggers[] = {
+    DR110_BD_PIN,
+    DR110_SD_PIN,
+    DR110_OH_PIN,
+    DR110_CH_PIN,
+    DR110_CY_PIN,
+    DR110_HCP_PIN
+  };
+  bool triggered[16];
+  unsigned long triggered_at[16];
+
+  uint8_t trigger_i;
+  uint8_t trigger;
+  unsigned long now;
+  unsigned long trigger_expires_at;
 
   void setup() {
     pinMode(DR110_START_PIN, OUTPUT);
@@ -19,6 +34,21 @@ namespace Dr110 {
     set_internal_clock(true);
   }
 
+  void iterate_triggers() {
+    for (trigger_i = 0; trigger_i < DR110_TRIGGERS; trigger_i++) {
+      trigger = triggers[trigger_i];
+      now = millis();
+
+      if (triggered[trigger]) {
+        trigger_expires_at = triggered_at[trigger] + DR110_PULSE_DELAY;
+
+        if (now > trigger_expires_at) {
+          digitalWrite(trigger, LOW);
+        }
+      }
+    }
+  }
+
   void start() {
     set_internal_clock(false);
     reset_clock();
@@ -33,11 +63,10 @@ namespace Dr110 {
   }
   
   void pulse(int pin) {
-    digitalWrite(pin, HIGH);
-    delay(DR110_PULSE_DELAY);
+    triggered[pin] = true;
+    triggered_at[pin] = millis();
 
-    digitalWrite(pin, LOW);
-    delay(DR110_PULSE_DELAY);
+    digitalWrite(pin, HIGH);
   }
 
   void set_internal_clock(bool enable) {

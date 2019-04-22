@@ -13,10 +13,12 @@
 #define DR110_CY_PIN 10
 #define DR110_HCP_PIN 16
 
-#define DR110_PULSE_DELAY 10
+#define DR110_TRIGGERS 6
+#define DR110_PULSE_DELAY 15
 
 namespace Dr110 {
   void setup();
+  void iterate_triggers();
   void start();
   void stop();
   void pulse(int);

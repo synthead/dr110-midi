@@ -8,4 +8,5 @@ void setup() {
 
 void loop() {
   Midi::process_messages();
+  Dr110::iterate_triggers();
 }
