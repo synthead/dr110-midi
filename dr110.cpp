@@ -20,6 +20,7 @@ namespace Dr110 {
   uint8_t trigger;
   unsigned long now;
   unsigned long trigger_expires_at;
+  uint8_t delay;
 
   void setup() {
     pinMode(DR110_START_PIN, OUTPUT);
@@ -42,7 +43,13 @@ namespace Dr110 {
       now = millis();
 
       if (triggered[trigger]) {
-        trigger_expires_at = triggered_at[trigger] + DR110_PULSE_DELAY;
+        delay = (
+          trigger == DR110_START_PIN || trigger == DR110_STOP_PIN ?
+          DR110_START_STOP_PULSE_DELAY :
+          DR110_PULSE_DELAY
+        );
+
+        trigger_expires_at = triggered_at[trigger] + delay;
 
         if (now > trigger_expires_at) {
           digitalWrite(trigger, LOW);

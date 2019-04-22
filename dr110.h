@@ -15,6 +15,7 @@
 
 #define DR110_TRIGGERS 8
 #define DR110_PULSE_DELAY 15
+#define DR110_START_STOP_PULSE_DELAY 50
 
 namespace Dr110 {
   void setup();
